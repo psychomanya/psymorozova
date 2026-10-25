@@ -2,7 +2,6 @@ export const PSYCHOLOGIST = {
   name: "Мария Морозова",
   title: "Клинический психолог • КПТ / ACT / CFT-терапевт",
   heroSubtitle: "Научно обоснованная и бережная психотерапия. Помогаю справиться с тревогой, бессонницей и выгоранием в комфортном для вас темпе.",
-  educationShort: "МГУ им. М.В. Ломоносова • Член АКПП",
   price: "5 000 ₽",
   firstSessionDuration: "1,5 часа (первичная диагностика)",
   regularSessionDuration: "50 минут (регулярная сессия)",
@@ -16,12 +15,6 @@ export const PSYCHOLOGIST = {
     channelName: "С психикой вальсируем 🧠",
     testsUrl: "https://psychomanya.github.io/psychotests/",
   },
-  stats: [
-    { value: "МГУ", label: "Фундаментальный специалитет (2013)" },
-    { value: "600+ ч", label: "Доказательного обучения (КПТ, ACT, CFT)" },
-    { value: "АКПП", label: "Регулярные супервизии и интервизии" },
-    { value: "100%", label: "Конфиденциальность и этика" },
-  ],
 };
 
 export const SERVICES = [

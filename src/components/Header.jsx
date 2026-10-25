@@ -35,13 +35,13 @@ export default function Header({ onOpenBooking }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Typographic Personal Brand Logo — clean, no badges/boxes */}
+          {/* Typographic Personal Brand — clean, quiet, professional */}
           <a href="#" className="flex flex-col group">
             <span className="font-bold text-slate-900 tracking-tight text-lg sm:text-xl group-hover:text-emerald-800 transition-colors leading-tight">
               {PSYCHOLOGIST.name}
             </span>
-            <span className="text-[11px] text-emerald-800/80 font-medium tracking-wide">
-              Клинический психолог • МГУ
+            <span className="text-xs text-slate-500 font-normal">
+              Клинический психолог
             </span>
           </a>
 

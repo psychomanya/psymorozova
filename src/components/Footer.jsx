@@ -26,7 +26,7 @@ export default function Footer({ onOpenBooking }) {
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm mb-5">
-              Научно доказанная психотерапия без давления и эзотерики. Выпускница МГУ им. Ломоносова, член АКПП, супервизии.
+              Индивидуальные онлайн-консультации. Научно доказанная психотерапия без давления и оценки.
             </p>
 
             <div className="flex items-center gap-2.5">

@@ -21,13 +21,13 @@ export default function About({ onOpenBooking }) {
 
             <div className="space-y-3 text-sm sm:text-base text-slate-600 leading-relaxed">
               <p>
-                Я — <strong className="text-slate-900 font-semibold">Мария Морозова</strong>, клинический психолог, выпускница факультета психологии <strong className="text-slate-900 font-semibold">МГУ им. М.В. Ломоносова</strong> (специалитет, 2013 г.).
+                Меня зовут <strong className="text-slate-900 font-semibold">Мария Морозова</strong>. Я клинический психолог и КПТ-терапевт. Получила фундаментальное психологическое образование и специализируюсь на доказательных протоколах помощи при тревоге, апатии и нарушениях сна.
               </p>
               <p>
-                Я знаю о тревоге, выгорании и синдроме самозванца не только по учебникам, но и по собственному опыту. Поэтому в моей работе нет давления, «правильных» ответов и оценок. Мы вместе исследуем ваши сложности с заботой и любопытством.
+                Я знаю о тревоге, выгорании и синдроме самозванца не только по профессиональной литературе, но и по личному пути. Поэтому в моей работе нет давления, готовых шаблонов и критики. Мы вместе исследуем ваши сложности с заботой и вниманием.
               </p>
               <p>
-                Главный ориентир в терапии — ваши истинные ценности, которые становятся надежным компасом для устойчивых изменений.
+                Нашим ориентиром всегда остаются ваши истинные ценности — то, что по-настоящему важно именно для вас.
               </p>
             </div>
 
@@ -39,7 +39,7 @@ export default function About({ onOpenBooking }) {
               </div>
               <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700">
                 <BookCheck className="w-4 h-4 text-emerald-700 shrink-0" />
-                <span>Супервизии в АКПП</span>
+                <span>Регулярные супервизии сложных кейсов</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700">
                 <HeartHandshake className="w-4 h-4 text-emerald-700 shrink-0" />
@@ -47,7 +47,7 @@ export default function About({ onOpenBooking }) {
               </div>
               <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700">
                 <Compass className="w-4 h-4 text-emerald-700 shrink-0" />
-                <span>Клиническая база и ориентация на науку</span>
+                <span>Научные протоколы с доказанной базой</span>
               </div>
             </div>
 
@@ -63,23 +63,23 @@ export default function About({ onOpenBooking }) {
 
           {/* Right Column: Close-up Portrait & Quote */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-emerald-100 aspect-[4/5] bg-emerald-900">
+            <div className="relative rounded-3xl overflow-hidden shadow-ambient border border-emerald-100 aspect-[4/5] bg-emerald-900">
               <img
                 src="./assets/mariya-morozova-portrait.jpg"
                 alt="Мария Морозова"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/75 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <div className="text-sm font-bold">Мария Морозова</div>
-                <div className="text-xs text-emerald-200">«Человеку нужен человек»</div>
+                <div className="text-xs text-emerald-200 font-medium">«Человеку нужен человек»</div>
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-emerald-900 text-white flex items-center justify-between gap-4">
+            <div className="p-4 rounded-2xl bg-emerald-900 text-white flex items-center justify-between gap-4">
               <div className="text-xs text-emerald-100">
-                Автор блога <strong className="text-white">«С психикой вальсируем 🧠»</strong>
+                Канал <strong className="text-white">«С психикой вальсируем 🧠»</strong>
               </div>
               <a
                 href={PSYCHOLOGIST.contacts.channel}
@@ -87,7 +87,7 @@ export default function About({ onOpenBooking }) {
                 rel="noopener noreferrer"
                 className="shrink-0 px-3 py-1.5 rounded-xl bg-white text-emerald-900 hover:bg-emerald-50 text-xs font-bold transition-all"
               >
-                Читать канал
+                Читать блог
               </a>
             </div>
           </div>
