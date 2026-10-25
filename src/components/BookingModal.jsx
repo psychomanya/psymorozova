@@ -39,7 +39,7 @@ export default function BookingModal({ isOpen, onClose }) {
         </h3>
         
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-          Напишите мне в удобный для вас мессенджер — мы обсудим вашу ситуацию и выберем время первой сессии.
+          Сессии проходят онлайн в <strong className="text-slate-900 font-medium">Яндекс Телемост</strong> (без VPN, вход по ссылке). Напишите мне в мессенджер — мы согласуем удобное время.
         </p>
 
         {/* Price Tag */}
@@ -88,13 +88,13 @@ export default function BookingModal({ isOpen, onClose }) {
               <Phone className="w-4 h-4 text-slate-500" />
               <span>{PSYCHOLOGIST.contacts.phone}</span>
             </div>
-            <span className="text-sm text-slate-500">Звонок / SMS</span>
+            <span className="text-sm text-slate-500">Телефон / SMS</span>
           </a>
         </div>
 
         <div className="flex items-center gap-2 text-sm text-slate-500">
           <ShieldCheck className="w-4 h-4 text-emerald-800 shrink-0" />
-          <span>100% конфиденциальность по кодексу профессиональной этики</span>
+          <span>Строгая конфиденциальность по кодексу профессиональной этики</span>
         </div>
 
       </div>

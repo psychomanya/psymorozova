@@ -21,7 +21,7 @@ export default function Footer({ onOpenBooking }) {
             </div>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm mb-6">
-              Индивидуальные консультации онлайн. Научно доказанная психотерапия в атмосфере уважения и принятия.
+              Индивидуальные консультации онлайн в Яндекс Телемост. Научно обоснованная психотерапия в атмосфере уважения и принятия.
             </p>
 
             <div className="flex items-center gap-3">

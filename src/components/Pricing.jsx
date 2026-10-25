@@ -56,14 +56,14 @@ export default function Pricing() {
               </div>
 
               <p className="text-sm text-slate-600 mb-8">
-                Онлайн по видеосвязи в защищенном формате
+                Видеосвязь онлайн в Яндекс Телемост (без VPN)
               </p>
 
               <div className="space-y-3 mb-8">
                 <div className="p-4 rounded-2xl bg-white flex items-center gap-3">
                   <Clock className="w-4 h-4 text-emerald-800 shrink-0" />
                   <div className="text-sm text-slate-800">
-                    <strong className="text-slate-900 font-medium">Первая встреча:</strong> 1,5 часа (90 минут)
+                    <strong className="text-slate-900 font-medium">Первая диагностика:</strong> 1,5 часа (90 минут)
                   </div>
                 </div>
 
@@ -78,7 +78,7 @@ export default function Pricing() {
               <ul className="space-y-3 text-sm text-slate-700 mb-8">
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-800 shrink-0" />
-                  <span>Google Meet, Telegram или WhatsApp</span>
+                  <span>Сессии в Яндекс Телемост (вход по ссылке в 1 клик)</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-800 shrink-0" />
@@ -86,7 +86,7 @@ export default function Pricing() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-800 shrink-0" />
-                  <span>Полная конфиденциальность по этическому кодексу</span>
+                  <span>Строгая конфиденциальность по этическому кодексу</span>
                 </li>
               </ul>
             </div>
