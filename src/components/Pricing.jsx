@@ -16,7 +16,7 @@ export default function Pricing() {
 
   const getTgUrl = () => {
     const text = encodeURIComponent(`Здравствуйте, Мария! Хочу записаться на консультацию. Мой запрос: ${selectedTopic}.`);
-    return `https://t.me/flymemary?text=${text}`;
+    return `tg://resolve?domain=flymemary&text=${text}`;
   };
 
   const getWaUrl = () => {
