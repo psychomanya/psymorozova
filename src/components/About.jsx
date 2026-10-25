@@ -4,88 +4,83 @@ import { PSYCHOLOGIST } from '../data/content';
 
 export default function About({ onOpenBooking }) {
   return (
-    <section id="about" className="py-16 sm:py-24 bg-[#FBFDFB]">
+    <section id="about" className="py-20 sm:py-28 bg-[#fafaf9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Story & Philosophy */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-3">
-              Обо мне
-            </div>
-            
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4">
-              «Перемены происходят через принятие себя, а не через вину и критику»
+            <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-slate-900 tracking-tight mb-4">
+              Обо мне и моем подходе
             </h2>
 
-            <div className="space-y-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+            <p className="font-editorial text-xl sm:text-2xl text-emerald-950 font-normal italic leading-snug mb-6">
+              «Перемены происходят через принятие, а не через вину и самокритику»
+            </p>
+
+            <div className="space-y-4 text-base text-slate-600 leading-relaxed">
               <p>
-                Меня зовут <strong className="text-slate-900 font-semibold">Мария Морозова</strong>. Я клинический психолог и КПТ-терапевт. Получила фундаментальное психологическое образование и специализируюсь на доказательных протоколах помощи при тревоге, апатии и нарушениях сна.
+                Меня зовут <strong className="text-slate-900 font-medium">Мария Морозова</strong>. Я клинический психолог и когнитивно-поведенческий терапевт. Работаю со взрослыми, помогая бережно распутать клубок тревоги, апатии и нарушений сна.
               </p>
               <p>
-                Я знаю о тревоге, выгорании и синдроме самозванца не только по профессиональной литературе, но и по личному пути. Поэтому в моей работе нет давления, готовых шаблонов и критики. Мы вместе исследуем ваши сложности с заботой и вниманием.
+                Я знаю о выгорании и синдроме самозванца не только по академическим статьям, но и по собственному опыту. В моем кабинете нет давления, шаблонов и оценок. Мы вместе исследуем ваши сложности в безопасном пространстве.
               </p>
               <p>
-                Нашим ориентиром всегда остаются ваши истинные ценности — то, что по-настоящему важно именно для вас.
+                Нашим ориентиром остаются ваши истинные ценности — то, что имеет значение именно для вашей жизни.
               </p>
             </div>
 
-            {/* 4 Pillars of Trust */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 pt-5 border-t border-slate-100">
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700">
-                <Shield className="w-4 h-4 text-emerald-700 shrink-0" />
+            {/* 4 Pillars */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-6">
+              <div className="flex items-center gap-2.5 text-sm text-slate-700">
+                <Shield className="w-4 h-4 text-emerald-800 shrink-0" />
                 <span>Личная терапия у психотерапевта</span>
               </div>
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700">
-                <BookCheck className="w-4 h-4 text-emerald-700 shrink-0" />
-                <span>Регулярные супервизии сложных кейсов</span>
+              <div className="flex items-center gap-2.5 text-sm text-slate-700">
+                <BookCheck className="w-4 h-4 text-emerald-800 shrink-0" />
+                <span>Регулярные профессиональные супервизии</span>
               </div>
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700">
-                <HeartHandshake className="w-4 h-4 text-emerald-700 shrink-0" />
-                <span>Безопасная и мягкая атмосфера</span>
+              <div className="flex items-center gap-2.5 text-sm text-slate-700">
+                <HeartHandshake className="w-4 h-4 text-emerald-800 shrink-0" />
+                <span>Бережная безоценочная среда</span>
               </div>
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700">
-                <Compass className="w-4 h-4 text-emerald-700 shrink-0" />
+              <div className="flex items-center gap-2.5 text-sm text-slate-700">
+                <Compass className="w-4 h-4 text-emerald-800 shrink-0" />
                 <span>Научные протоколы с доказанной базой</span>
               </div>
             </div>
 
-            <div className="mt-7">
+            <div className="mt-8">
               <button
                 onClick={onOpenBooking}
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-2xl text-xs sm:text-sm font-bold text-white bg-emerald-800 hover:bg-emerald-900 transition-all cursor-pointer shadow-xs"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-emerald-900 hover:bg-emerald-950 transition-colors cursor-pointer"
               >
                 <span>Записаться на сессию</span>
               </button>
             </div>
           </div>
 
-          {/* Right Column: Close-up Portrait & Quote */}
-          <div className="lg:col-span-5 flex flex-col gap-4">
-            <div className="relative rounded-3xl overflow-hidden shadow-ambient border border-emerald-100 aspect-[4/5] bg-emerald-900">
+          {/* Right Column: Close-up Portrait & Channel */}
+          <div className="lg:col-span-5 flex flex-col gap-5">
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-slate-200">
               <img
                 src="./assets/mariya-morozova-portrait.jpg"
                 alt="Мария Морозова"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <div className="text-sm font-bold">Мария Морозова</div>
-                <div className="text-xs text-emerald-200 font-medium">«Человеку нужен человек»</div>
-              </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-emerald-900 text-white flex items-center justify-between gap-4">
-              <div className="text-xs text-emerald-100">
-                Канал <strong className="text-white">«С психикой вальсируем 🧠»</strong>
+            <div className="p-5 rounded-2xl bg-[#0d5c56] text-white flex items-center justify-between gap-4">
+              <div className="text-sm font-medium">
+                Канал «С психикой вальсируем»
               </div>
               <a
                 href={PSYCHOLOGIST.contacts.channel}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 px-3 py-1.5 rounded-xl bg-white text-emerald-900 hover:bg-emerald-50 text-xs font-bold transition-all"
+                className="shrink-0 px-4 py-2 rounded-full bg-white text-emerald-950 hover:bg-emerald-50 text-sm font-semibold transition-colors"
               >
                 Читать блог
               </a>

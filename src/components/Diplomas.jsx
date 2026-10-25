@@ -1,89 +1,118 @@
 import React, { useState } from 'react';
-import { Eye, Clock, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import { DIPLOMAS } from '../data/content';
 import DiplomaModal from './DiplomaModal';
 
 export default function Diplomas() {
   const [selectedDiploma, setSelectedDiploma] = useState(null);
+  const universityDiploma = DIPLOMAS[0]; // MSU
+  const certifications = DIPLOMAS.slice(1); // AKPP, ACT, CBT-I
 
   return (
-    <section id="diplomas" className="py-16 sm:py-24 bg-[#FBFDFB]">
+    <section id="diplomas" className="py-20 sm:py-28 bg-[#fafaf9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-2">
-            Квалификация
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
-            Образование и дипломы
+        <div className="max-w-2xl mb-14">
+          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-slate-900 tracking-tight mb-3">
+            Образование и квалификация
           </h2>
-          <p className="text-sm text-slate-600">
-            Все документы государственного образца открыты для подтверждения квалификации.
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Все документы государственного образца открыты для подтверждения профессионального уровня.
           </p>
         </div>
 
-        {/* Diplomas Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10">
-          {DIPLOMAS.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => setSelectedDiploma(item)}
-              className="group bg-white rounded-2xl border border-emerald-100 hover:border-emerald-300 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden cursor-pointer flex flex-col justify-between"
-            >
-              {/* Thumbnail */}
-              <div className="relative aspect-[4/3] bg-slate-100 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-300"
-                  loading="lazy"
-                />
-                
-                <div className="absolute inset-0 bg-emerald-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="px-3 py-1.5 rounded-full bg-white text-emerald-900 text-xs font-bold shadow-md flex items-center gap-1">
-                    <Eye className="w-3.5 h-3.5" />
-                    <span>Увеличить</span>
+        {/* Primary University Diploma — Featured Presentation */}
+        <div 
+          onClick={() => setSelectedDiploma(universityDiploma)}
+          className="bg-white rounded-3xl p-8 sm:p-10 mb-8 cursor-pointer transition-transform duration-200 hover:-translate-y-1 flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
+        >
+          <div className="w-full lg:w-1/2 aspect-[16/10] bg-slate-200 rounded-2xl overflow-hidden relative">
+            <img
+              src={universityDiploma.image}
+              alt={universityDiploma.title}
+              className="w-full h-full object-cover object-top"
+              loading="eager"
+            />
+            <div className="absolute top-4 left-4">
+              <span className="text-sm font-semibold px-4 py-1.5 rounded-full bg-white text-emerald-950">
+                {universityDiploma.badge}
+              </span>
+            </div>
+          </div>
+
+          <div className="w-full lg:w-1/2 flex flex-col justify-between">
+            <div>
+              <h3 className="font-editorial text-2xl sm:text-3xl font-medium text-slate-900 mb-2 leading-snug">
+                {universityDiploma.title}
+              </h3>
+              <div className="text-sm font-semibold text-emerald-900 mb-4">
+                {universityDiploma.issuer}
+              </div>
+              <p className="text-base text-slate-600 leading-relaxed mb-6">
+                {universityDiploma.details}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-between text-sm sm:text-base text-slate-700 pt-4">
+              <span className="font-medium text-slate-600">{universityDiploma.hours}</span>
+              <span className="font-semibold text-slate-900">{universityDiploma.year} г.</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Specialized Clinical Certifications */}
+        <div className="mb-14">
+          <h3 className="font-editorial text-2xl font-medium text-slate-900 mb-6">
+            Клиническая специализация и протоколы
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {certifications.map((item) => (
+              <div
+                key={item.id}
+                onClick={() => setSelectedDiploma(item)}
+                className="bg-white rounded-3xl p-7 cursor-pointer transition-transform duration-200 hover:-translate-y-1 flex flex-col justify-between"
+              >
+                <div className="aspect-[4/3] bg-slate-200 rounded-2xl overflow-hidden relative mb-5">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover object-top"
+                    loading="eager"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="text-sm font-semibold px-3 py-1 rounded-full bg-white text-emerald-950">
+                      {item.badge}
+                    </span>
                   </div>
                 </div>
 
-                <div className="absolute top-2.5 left-2.5">
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/95 text-emerald-900 shadow-xs border border-emerald-100">
-                    {item.badge}
-                  </span>
-                </div>
-              </div>
-
-              {/* Info */}
-              <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="text-[11px] font-semibold text-emerald-800 mb-0.5">
+                  <div className="text-sm font-medium text-emerald-900 mb-1">
                     {item.issuer}
                   </div>
-                  <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug mb-2 group-hover:text-emerald-800 transition-colors line-clamp-2">
+                  <h4 className="font-editorial text-lg font-medium text-slate-900 leading-snug mb-3">
                     {item.title}
                   </h4>
                 </div>
 
-                <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-3 h-3 text-emerald-600" />
-                    <span>{item.hours}</span>
-                  </div>
-                  <span className="font-semibold">{item.year} г.</span>
+                <div className="pt-3 flex items-center justify-between text-sm text-slate-700">
+                  <span className="text-slate-600">{item.hours}</span>
+                  <span className="font-semibold text-slate-900">{item.year} г.</span>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Minimalist Trust Bar */}
-        <div className="p-4 rounded-2xl bg-emerald-900 text-white flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2.5">
-            <ShieldCheck className="w-4 h-4 text-emerald-300 shrink-0" />
-            <span>Более 600 академических часов специализированного постдипломного обучения доказательным методам</span>
+        <div className="p-8 sm:p-10 rounded-3xl bg-[#0d5c56] text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <ShieldCheck className="w-7 h-7 text-emerald-200 shrink-0" />
+            <span className="text-base sm:text-lg">Более 600 академических часов специализированного постдипломного обучения доказательным методам</span>
           </div>
-          <span className="text-emerald-200 text-[11px]">Государственные лицензии</span>
+          <span className="text-emerald-100 text-sm sm:text-base shrink-0 font-medium">Государственные лицензии</span>
         </div>
 
       </div>

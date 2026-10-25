@@ -25,123 +25,117 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="py-16 sm:py-24 bg-white border-y border-emerald-50">
+    <section id="pricing" className="py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-2">
-            Стоимость
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
-            Условия и запись
+        <div className="max-w-2xl mb-14">
+          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-slate-900 tracking-tight mb-3">
+            Стоимость и запись
           </h2>
-          <p className="text-sm text-slate-600">
-            Прозрачная цена без скрытых условий и навязанных пакетов.
+          <p className="text-base text-slate-600 leading-relaxed">
+            Прозрачные условия без скрытых доплат и навязывания долгосрочных пакетов.
           </p>
         </div>
 
-        {/* Pricing & 1-Click Generator Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-5xl mx-auto">
+        {/* Pricing Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-5xl">
           
           {/* Main Price Card */}
-          <div className="lg:col-span-6 rounded-3xl p-7 sm:p-8 bg-gradient-to-br from-[#FBFDFB] to-emerald-50/40 border border-emerald-200 shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-6 rounded-3xl p-8 sm:p-10 bg-[#f3f5f3] flex flex-col justify-between anim-rise">
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-100 text-emerald-900">
-                  Индивидуальная сессия
-                </span>
-                <span className="text-xs text-slate-500 font-medium">Онлайн по видеосвязи</span>
-              </div>
+              <h3 className="font-editorial text-2xl font-medium text-slate-900 mb-4">
+                Индивидуальная сессия
+              </h3>
 
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="font-editorial text-4xl sm:text-5xl font-medium text-slate-900 tracking-tight">
                   {PSYCHOLOGIST.price}
                 </span>
-                <span className="text-sm text-slate-500">/ консультация</span>
+                <span className="text-sm text-slate-600">/ сессия</span>
               </div>
 
-              <div className="space-y-3 mb-6">
-                <div className="p-3.5 rounded-xl bg-white border border-emerald-100 flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-emerald-700 shrink-0" />
-                  <div className="text-xs sm:text-sm text-slate-800">
-                    <strong className="text-slate-900">Первая встреча:</strong> 1,5 часа (90 мин)
+              <p className="text-sm text-slate-600 mb-8">
+                Онлайн по видеосвязи в защищенном формате
+              </p>
+
+              <div className="space-y-3 mb-8">
+                <div className="p-4 rounded-2xl bg-white flex items-center gap-3">
+                  <Clock className="w-4 h-4 text-emerald-800 shrink-0" />
+                  <div className="text-sm text-slate-800">
+                    <strong className="text-slate-900 font-medium">Первая встреча:</strong> 1,5 часа (90 минут)
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-white border border-emerald-100 flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-teal-700 shrink-0" />
-                  <div className="text-xs sm:text-sm text-slate-800">
-                    <strong className="text-slate-900">Последующие сессии:</strong> 50 минут
+                <div className="p-4 rounded-2xl bg-white flex items-center gap-3">
+                  <Clock className="w-4 h-4 text-emerald-800 shrink-0" />
+                  <div className="text-sm text-slate-800">
+                    <strong className="text-slate-900 font-medium">Регулярные сессии:</strong> 50 минут
                   </div>
                 </div>
               </div>
 
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-600 mb-6">
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+              <ul className="space-y-3 text-sm text-slate-700 mb-8">
+                <li className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-emerald-800 shrink-0" />
                   <span>Google Meet, Telegram или WhatsApp</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                <li className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-emerald-800 shrink-0" />
                   <span>Взрослые и подростки 16+ (с согласия родителей)</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>100% конфиденциальность по кодексу этики</span>
+                <li className="flex items-center gap-2.5">
+                  <Check className="w-4 h-4 text-emerald-800 shrink-0" />
+                  <span>Полная конфиденциальность по этическому кодексу</span>
                 </li>
               </ul>
             </div>
 
-            <div className="pt-4 border-t border-slate-100 flex gap-3">
+            <div className="pt-4 flex gap-3">
               <a
                 href={PSYCHOLOGIST.contacts.telegram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs transition-colors"
+                className="flex-1 inline-flex items-center justify-center gap-2 py-4 px-5 rounded-full text-sm font-semibold text-white bg-emerald-900 hover:bg-emerald-950 transition-colors"
               >
-                <Send className="w-3.5 h-3.5" />
-                <span>Telegram</span>
+                <Send className="w-4 h-4" />
+                <span>Записаться в Telegram</span>
               </a>
 
               <a
                 href={PSYCHOLOGIST.contacts.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-teal-50 hover:bg-teal-100 text-teal-900 font-bold text-xs border border-teal-200 transition-colors"
+                className="inline-flex items-center justify-center p-4 rounded-full text-emerald-950 bg-white hover:bg-[#e6f4f1] transition-colors"
+                aria-label="Записаться через WhatsApp"
               >
-                <MessageSquare className="w-3.5 h-3.5 text-teal-700" />
-                <span>WhatsApp</span>
+                <MessageSquare className="w-4 h-4" />
               </a>
             </div>
           </div>
 
-          {/* 1-Click Request Assistant */}
-          <div className="lg:col-span-6 rounded-3xl p-7 sm:p-8 bg-slate-900 text-white flex flex-col justify-between shadow-lg">
+          {/* Quick Message Composer */}
+          <div className="lg:col-span-6 rounded-3xl p-8 sm:p-10 bg-[#fafaf9] flex flex-col justify-between">
             <div>
-              <div className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2">
-                Быстрая запись
-              </div>
-
-              <h3 className="text-xl font-bold mb-2">
-                С чего начнем?
+              <h3 className="font-editorial text-2xl font-medium text-slate-900 mb-2">
+                Записаться с готовым запросом
               </h3>
-              
-              <p className="text-xs text-slate-300 mb-5 leading-relaxed">
-                Выберите запрос — система сформирует вежливое сообщение, чтобы вам не пришлось думать над формулировкой:
+              <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+                Выберите то, что беспокоит сейчас, и отправьте готовое сообщение психологу в один клик.
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
+              {/* Topics chips */}
+              <div className="flex flex-wrap gap-2.5 mb-6">
                 {topics.map((t) => {
                   const isSelected = selectedTopic === t;
                   return (
                     <button
                       key={t}
                       onClick={() => setSelectedTopic(t)}
-                      className={`text-xs px-3 py-1.5 rounded-xl font-medium transition-all cursor-pointer ${
+                      className={`px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
                         isSelected
-                          ? 'bg-emerald-500 text-slate-950 font-bold'
-                          : 'bg-white/10 text-slate-300 hover:bg-white/15'
+                          ? 'bg-emerald-900 text-white'
+                          : 'bg-white text-slate-700 hover:bg-[#e6f4f1]'
                       }`}
                     >
                       {t}
@@ -150,24 +144,21 @@ export default function Pricing() {
                 })}
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 mb-6">
-                <div className="text-[10px] text-slate-400 mb-1 uppercase font-semibold">
-                  Текст сообщения:
-                </div>
-                <div className="text-xs text-emerald-200 font-mono italic">
-                  «Здравствуйте, Мария! Хочу записаться на консультацию. Мой запрос: {selectedTopic}.»
-                </div>
+              {/* Preview bubble */}
+              <div className="p-4 rounded-2xl bg-white text-sm text-slate-700 leading-relaxed mb-6">
+                <span className="text-sm text-slate-500 block mb-1">Предварительный текст сообщения:</span>
+                «Здравствуйте, Мария! Хочу записаться на консультацию. Мой запрос: {selectedTopic}.»
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-2.5">
+            <div className="space-y-3">
               <a
                 href={getTgUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-colors text-center"
+                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-full text-sm font-semibold text-white bg-emerald-900 hover:bg-emerald-950 transition-colors"
               >
-                <Send className="w-3.5 h-3.5" />
+                <Send className="w-4 h-4" />
                 <span>Отправить в Telegram</span>
               </a>
 
@@ -175,9 +166,9 @@ export default function Pricing() {
                 href={getWaUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition-colors text-center"
+                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-full text-sm font-semibold text-emerald-950 bg-[#e6f4f1] hover:bg-[#d8ece8] transition-colors"
               >
-                <MessageSquare className="w-3.5 h-3.5 text-emerald-300" />
+                <MessageSquare className="w-4 h-4" />
                 <span>Отправить в WhatsApp</span>
               </a>
             </div>

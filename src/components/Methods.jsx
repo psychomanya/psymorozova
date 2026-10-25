@@ -1,86 +1,74 @@
 import React, { useState } from 'react';
-import { Brain, Compass, Heart, Moon, CheckCircle, ArrowRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { METHODS } from '../data/content';
-
-const methodIcons = {
-  CBT: Brain,
-  ACT: Compass,
-  CFT: Heart,
-  'CBT-I': Moon,
-};
 
 export default function Methods({ onOpenBooking }) {
   const [activeTab, setActiveTab] = useState('CBT');
 
   const selectedMethod = METHODS.find((m) => m.code === activeTab) || METHODS[0];
-  const Icon = methodIcons[selectedMethod.code] || Brain;
 
   return (
-    <section id="methods" className="py-16 sm:py-24 bg-white border-y border-emerald-50">
+    <section id="methods" className="py-20 sm:py-28 bg-[#fafaf9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-2">
-            Методы
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
-            Доказательная база
+        <div className="max-w-2xl mb-12">
+          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-slate-900 tracking-tight mb-3">
+            Научно обоснованные методы
           </h2>
-          <p className="text-sm sm:text-base text-slate-600">
-            Только научно проверенные подходы с подтвержденной эффективностью.
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Подходы доказательной медицины с подтвержденной эффективностью в международных клинических исследованиях.
           </p>
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+        <div className="flex flex-wrap items-center gap-3 mb-10">
           {METHODS.map((method) => {
-            const TabIcon = methodIcons[method.code] || Brain;
             const isActive = activeTab === method.code;
             return (
               <button
                 key={method.code}
                 onClick={() => setActiveTab(method.code)}
-                className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                className={`px-6 py-3 rounded-full text-base font-medium transition-colors cursor-pointer ${
                   isActive
-                    ? 'bg-emerald-800 text-white shadow-xs'
-                    : 'bg-slate-50 text-slate-700 hover:bg-emerald-50 border border-slate-200/70'
+                    ? 'bg-emerald-900 text-white'
+                    : 'bg-white text-slate-800 hover:bg-[#e6f4f1] hover:text-emerald-950'
                 }`}
               >
-                <TabIcon className={`w-3.5 h-3.5 ${isActive ? 'text-emerald-200' : 'text-emerald-700'}`} />
                 <span>{method.code}</span>
               </button>
             );
           })}
         </div>
 
-        {/* Compact Method Card */}
-        <div className="bg-[#FBFDFB] rounded-2xl p-6 sm:p-8 border border-emerald-100 max-w-3xl mx-auto shadow-xs">
-          <div className="flex items-center gap-3.5 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
-              <Icon className="w-5 h-5 text-emerald-800" />
-            </div>
-            <div>
-              <div className="text-[11px] font-bold uppercase tracking-wider text-emerald-700">
-                {selectedMethod.code}
-              </div>
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-tight">
-                {selectedMethod.name}
-              </h3>
-            </div>
+        {/* Selected Method Panel */}
+        <div className="bg-white rounded-3xl p-8 sm:p-12 max-w-4xl">
+          <div className="mb-6">
+            <h3 className="font-editorial text-xl sm:text-2xl md:text-3xl font-medium text-slate-900 leading-tight">
+              {selectedMethod.name}
+            </h3>
           </div>
 
-          <p className="text-sm text-slate-600 leading-relaxed mb-5">
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
             {selectedMethod.summary}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-4 border-t border-slate-100">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
             {selectedMethod.bullets.map((b, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
-                <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <div key={idx} className="flex items-start gap-2.5 text-base text-slate-800">
+                <Check className="w-5 h-5 text-emerald-800 shrink-0 mt-0.5" />
                 <span>{b}</span>
               </div>
             ))}
+          </div>
+
+          <div className="mt-10 pt-4">
+            <button
+              onClick={onOpenBooking}
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold text-white bg-emerald-900 hover:bg-emerald-950 transition-colors cursor-pointer"
+            >
+              <span>Подобрать метод на консультации</span>
+            </button>
           </div>
         </div>
 

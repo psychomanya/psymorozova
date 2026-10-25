@@ -16,7 +16,7 @@ export default function App() {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FBFDFB] text-slate-800 antialiased font-sans">
+    <div className="min-h-dvh flex flex-col bg-[#fafaf9] text-slate-900 antialiased font-sans">
       <Header onOpenBooking={() => setBookingModalOpen(true)} />
       
       <main className="flex-1">

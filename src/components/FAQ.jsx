@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 import { FAQS } from '../data/content';
 
 export default function FAQ() {
@@ -10,45 +9,42 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-[#FBFDFB] relative">
+    <section id="faq" className="py-20 sm:py-28 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-3">
-            Вопросы и ответы
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-            Часто задаваемые вопросы
+        <div className="max-w-2xl mb-14">
+          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-slate-900 tracking-tight mb-3">
+            Ответы на частые вопросы
           </h2>
-          <p className="text-base text-slate-600 leading-relaxed">
-            Ответы на то, что чаще всего волнует клиентов перед первым обращением к психологу.
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            То, что чаще всего волнует перед первой консультацией с психологом.
           </p>
         </div>
 
-        {/* FAQ Accordion */}
-        <div className="space-y-4">
+        {/* Editorial FAQ Accordion — Clean lines, zero boxed cards */}
+        <div className="space-y-6">
           {FAQS.map((item, idx) => {
             const isOpen = openIdx === idx;
             return (
               <div
                 key={idx}
-                className="bg-white rounded-3xl border border-emerald-100/90 shadow-sm overflow-hidden transition-all duration-200"
+                className="pb-6"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-emerald-50/40 transition-colors"
+                  className="w-full text-left flex items-center justify-between gap-6 cursor-pointer py-2"
                 >
-                  <span className="text-base sm:text-lg font-bold text-slate-900">
+                  <span className="font-editorial text-base sm:text-xl font-medium text-slate-900 leading-snug">
                     {item.q}
                   </span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${isOpen ? 'bg-emerald-800 text-white rotate-180' : 'bg-emerald-50 text-emerald-700'}`}>
-                    <ChevronDown className="w-4 h-4" />
-                  </div>
+                  <span className="text-2xl font-light text-slate-400 shrink-0">
+                    {isOpen ? '−' : '+'}
+                  </span>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-50 animate-fade-in font-normal">
+                  <div className="pt-4 text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
                     {item.a}
                   </div>
                 )}

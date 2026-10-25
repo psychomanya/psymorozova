@@ -29,6 +29,7 @@ round_video_messages/
 photos/
 scratch/
 .gemini/
+.taste-skill/
 *фотоМорозова*
 *.jpg
 !public/assets/*.jpg
