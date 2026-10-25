@@ -45,9 +45,7 @@ export default function TelegramBlog() {
 
               <div className="pt-2">
                 <a
-                  href={PSYCHOLOGIST.contacts.channel}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={article.url || PSYCHOLOGIST.contacts.channel}
                   className="text-sm font-semibold text-emerald-900 hover:text-emerald-950 inline-flex items-center gap-1.5"
                 >
                   <span>Читать разбор в канале</span>
@@ -76,8 +74,6 @@ export default function TelegramBlog() {
 
           <a
             href={PSYCHOLOGIST.contacts.channel}
-            target="_blank"
-            rel="noopener noreferrer"
             className="shrink-0 px-8 py-4 rounded-full bg-white text-emerald-950 hover:bg-emerald-50 text-base font-semibold transition-colors"
           >
             Подписаться

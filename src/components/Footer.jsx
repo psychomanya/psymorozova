@@ -27,8 +27,6 @@ export default function Footer({ onOpenBooking }) {
             <div className="flex items-center gap-3">
               <a
                 href={PSYCHOLOGIST.contacts.telegram}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-emerald-800 text-white flex items-center justify-center transition-colors"
                 aria-label="Telegram"
               >
@@ -47,8 +45,6 @@ export default function Footer({ onOpenBooking }) {
 
               <a
                 href={PSYCHOLOGIST.contacts.channel}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium flex items-center gap-1.5 transition-colors"
               >
                 <span>Telegram-канал</span>
@@ -82,7 +78,7 @@ export default function Footer({ onOpenBooking }) {
             <div className="space-y-3 text-sm mb-6">
               <div className="flex items-center gap-2.5 text-slate-300">
                 <Send className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a href={PSYCHOLOGIST.contacts.telegram} target="_blank" rel="noopener noreferrer" className="hover:text-white underline underline-offset-2">
+                <a href={PSYCHOLOGIST.contacts.telegram} className="hover:text-white underline underline-offset-2">
                   {PSYCHOLOGIST.contacts.telegramUsername}
                 </a>
               </div>

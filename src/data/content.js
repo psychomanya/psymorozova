@@ -224,6 +224,7 @@ export const TELEGRAM_ARTICLES = [
     id: "anchor",
     title: "Техника «Бросить якорь»",
     tag: "При панике и тревоге",
+    url: "tg://resolve?domain=psywaltz&post=129",
     steps: [
       "Заметьте и назовите свои чувства без борьбы",
       "Ощутите контакт тела с полом и ровное дыхание",
@@ -234,6 +235,7 @@ export const TELEGRAM_ARTICLES = [
     id: "sleep-hygiene",
     title: "Правила крепкого сна",
     tag: "КПТ-сомнология",
+    url: "tg://resolve?domain=psywaltz&post=35",
     steps: [
       "Подъем в одно и то же время даже в выходные",
       "Кровать — только для сна, а не для телефона и работы",
@@ -244,6 +246,7 @@ export const TELEGRAM_ARTICLES = [
     id: "kind-letter",
     title: "Практика «Доброе письмо»",
     tag: "Против самокритики",
+    url: "tg://resolve?domain=psywaltz&post=106",
     steps: [
       "Опишите ошибку, за которую себя корите",
       "Вспомните того, кто принимает вас безусловно",

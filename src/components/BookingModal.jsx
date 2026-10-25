@@ -58,8 +58,6 @@ export default function BookingModal({ isOpen, onClose }) {
         <div className="space-y-3 mb-6">
           <a
             href={PSYCHOLOGIST.contacts.telegram}
-            target="_blank"
-            rel="noopener noreferrer"
             className="flex items-center justify-between p-4 rounded-2xl bg-emerald-900 hover:bg-emerald-950 text-white font-semibold text-sm transition-colors"
           >
             <div className="flex items-center gap-3">

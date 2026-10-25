@@ -63,8 +63,6 @@ export default function Header({ onOpenBooking }) {
           <div className="hidden sm:flex items-center gap-3.5">
             <a
               href={PSYCHOLOGIST.contacts.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-emerald-900 bg-[#e6f4f1] hover:bg-[#d8ece8] transition-colors"
             >
               <Send className="w-3.5 h-3.5 text-emerald-800" />
@@ -114,8 +112,6 @@ export default function Header({ onOpenBooking }) {
               <div className="pt-3 mt-1">
                 <a
                   href={PSYCHOLOGIST.contacts.telegram}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-emerald-950 bg-[#e6f4f1]"
                 >
                   <Send className="w-4 h-4" />

@@ -97,8 +97,6 @@ export default function Tests() {
             <div className="shrink-0">
               <a
                 href={`tg://resolve?domain=flymemary&text=${encodeURIComponent(selectedSymptom.tgMessage)}`}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-full text-base font-semibold text-white bg-emerald-900 hover:bg-emerald-950 transition-colors"
               >
                 <span>Обсудить этот запрос</span>

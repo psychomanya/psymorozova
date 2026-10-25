@@ -94,8 +94,6 @@ export default function Pricing() {
             <div className="pt-4 flex gap-3">
               <a
                 href={PSYCHOLOGIST.contacts.telegram}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="flex-1 inline-flex items-center justify-center gap-2 py-4 px-5 rounded-full text-sm font-semibold text-white bg-emerald-900 hover:bg-emerald-950 transition-colors"
               >
                 <Send className="w-4 h-4" />
@@ -154,8 +152,6 @@ export default function Pricing() {
             <div className="space-y-3">
               <a
                 href={getTgUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-full text-sm font-semibold text-white bg-emerald-900 hover:bg-emerald-950 transition-colors"
               >
                 <Send className="w-4 h-4" />

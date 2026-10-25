@@ -78,8 +78,6 @@ export default function About({ onOpenBooking }) {
               </div>
               <a
                 href={PSYCHOLOGIST.contacts.channel}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="shrink-0 px-4 py-2 rounded-full bg-white text-emerald-950 hover:bg-emerald-50 text-sm font-semibold transition-colors"
               >
                 Читать блог
