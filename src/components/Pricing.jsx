@@ -56,7 +56,7 @@ export default function Pricing() {
               </div>
 
               <p className="text-sm text-slate-600 mb-8">
-                Видеосвязь онлайн в Яндекс Телемост (без VPN)
+                Индивидуальные консультации онлайн
               </p>
 
               <div className="space-y-3 mb-8">
@@ -78,7 +78,7 @@ export default function Pricing() {
               <ul className="space-y-3 text-sm text-slate-700 mb-8">
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-800 shrink-0" />
-                  <span>Сессии в Яндекс Телемост (вход по ссылке в 1 клик)</span>
+                  <span>Защищенная видеосвязь по персональной ссылке</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-800 shrink-0" />

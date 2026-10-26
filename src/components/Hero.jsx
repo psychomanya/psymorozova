@@ -30,7 +30,7 @@ export default function Hero({ onOpenBooking }) {
               </div>
               <div className="flex items-center gap-3 text-base text-slate-800">
                 <Check className="w-5 h-5 text-emerald-800 shrink-0" />
-                <span>Сессии в Яндекс Телемост</span>
+                <span>Индивидуальные сессии онлайн</span>
               </div>
               <div className="flex items-center gap-3 text-base text-slate-800">
                 <Check className="w-5 h-5 text-emerald-800 shrink-0" />

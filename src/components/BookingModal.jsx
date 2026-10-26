@@ -39,7 +39,7 @@ export default function BookingModal({ isOpen, onClose }) {
         </h3>
         
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-          Сессии проходят онлайн в <strong className="text-slate-900 font-medium">Яндекс Телемост</strong> (без VPN, вход по ссылке). Напишите мне в мессенджер — мы согласуем удобное время.
+          Напишите мне в удобный мессенджер — мы обсудим вашу ситуацию и согласуем время первой сессии.
         </p>
 
         {/* Price Tag */}
